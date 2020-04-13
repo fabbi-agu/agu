@@ -1,0 +1,27 @@
+def  primo ( num ):
+    si  num < 2 :
+        volver  falso
+    para  q  en  rango ( 2 , total ):
+        si  total  %  q  ==  0 :
+            volver  falso
+    volver  verdadero
+palabra  = input ( 'ingrese una palabra' )
+total = 0
+lis1 = []
+conj = set ()
+para  i  en  rango ( len ( palabra )):
+    total = 0
+    letra = palabra [ i ]
+    si  no  letra  en  conj :
+        conj . añadir ( letra )
+        para  h  en  rango ( len ( palabra )):
+            if ( letra == palabra [ h ]):
+                total = total + 1
+        booleano = primo ( total )
+        si  booleano :
+            lis1 . append ( letra )
+        print ( 'la letra:' , letra , 'se repite' , total )
+lis_imprimir = ''
+para  yo  en  lis1 :
+    lis_imprimir = lis_imprimir + '' + i
+print ( 'las lletras' , lis_imprimir , 'aparecen un numero primo de veces' )
